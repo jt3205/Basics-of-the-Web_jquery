@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.container{
+			position: absolute;
+			top:10px;
+			left: 100px;
+			height: 300px;
+			width: 600px;
+			border: 1px  dotted  red;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			window.onload=function(){
+				//result.innerHTML="<b>왼쪽 메뉴를 선택하시오</b>";
+				$('#result').html("<b>왼쪽 메뉴를 선택하시오</b>");
+			}
+			//크기 : 20px, 굵기 : bold, 글자색 : 빨강
+			$('#welcome').click(function(){
+				$('#result').html("<span style='font-size:20px; font-weight:bold; color:cyan'>양영 디지털 고등학교</span>");	
+			});
+
+			$('#sample').click(function(){
+				$('#result').load("../content/sample.txt");
+			});
+			
+
+		});
+	</script>
+</head>
+<body>
+	<a id="welcome" href="#">처음화면</a><br><br>
+	<a id="sample" href="#">샘플화면</a><br><br>
+
+	<div id="result" class="container"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

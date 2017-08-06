@@ -1,0 +1,27 @@
+<!-- 한글처리 :  utf-8  -->
+<h2>jQuery신기한 로딩</h2>
+<table>
+	<tr id="key">
+		<th>이름</th>
+		<th>주소</th>
+		<th>나이</th>
+	</tr>
+	<tr id="value">
+		<td>제임스</td>
+		<td>22</td>
+		<td>서울</td>
+	</tr>
+	<tr id="value">
+		<td>토마스</td>
+		<td>25</td>
+		<td>부산</td>
+	</tr>
+	<tr id="value">
+		<td>엘리스</td>
+		<td>22</td>
+		<td>제주</td>
+	</tr>
+</table>
+
+
+

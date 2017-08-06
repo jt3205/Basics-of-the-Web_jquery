@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- style_1.css  or  style_2.css  -->
+<link href="../stylesdemo/style_2.css" type="text/css" rel="stylesheet" />
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+	$('#ddmenu>li').hover(menu_open,menu_close);
+  });
+  
+  function menu_open(){
+	 $(this).find('ul').css('visibility','visible');	
+  }
+  
+  function menu_close(){
+	  $(this).find('ul').css('visibility','hidden');
+  }
+</script>
+</head>
+<body>
+  <div id="wrap">
+   <div id="header">
+     <h1>jQuery Horizental Drop Down Menu</h1>
+   </div>
+   <!-- 메뉴시작 -->
+    <ul id="ddmenu">
+      <li><a href="#">Services</a>
+         <ul>
+          <li><a href="http://www.JHTA.co.kr">Panel Beating</a></li>
+          <li><a href="#">Insturance Claim</a></li>
+          <li><a href="#">Spray Painting</a></li>
+          <li><a href="#">Engine Servicing</a></li>          
+         </ul>
+      </li>
+      
+      <li><a href="#">Gallery</a>
+      <ul>
+		<li><a href="#">Work Place</a></li>
+		<li><a href="#">Our Cars</a></li>
+		<li><a href="#">Our Staff</a></li>
+		<li><a href="#">Special Events</a></li>
+	  </ul>
+      </li>
+      
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Home</a></li>
+    </ul>
+   <!-- 메뉴 종료 -->
+ </div>
+</body>
+</html>

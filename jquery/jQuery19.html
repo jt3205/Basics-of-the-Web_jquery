@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>http://localhost:8080/jqy/jquery/jQuery17_menu.html
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+  /*
+    bind : 정적으로 생성된 요소에만 이벤트를 연결한다.  
+    on : 동적으로 생성된 요소에도 이벤트를 연결한다.
+  */
+
+	$(document).ready(function() {
+      $('h3').on('click',function(){
+    	  var length=$('h3').length; //h1요소 갯수리턴
+    	  var targetHTML=$(this).html();
+    	  $('#wrap').append('<h3>'+length+"-"+targetHTML+'</h3>');
+      });
+      
+      //10초 뒤에 모든 이벤트를 제거한다.
+      //setTimeout(함수,시간);
+      setTimeout(function(){
+    	  //bind로 연결한 이벤트는 unbind()로 제거한다.
+    	  //on로 연결한 이벤트는 off()로 제거한다.
+    	  $('h3').off();
+    	  alert("모든 이벤트가 제거되었음");
+      },10000);
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h3><a href="#">title</a></h3>
+	</div>
+</body>
+</html>

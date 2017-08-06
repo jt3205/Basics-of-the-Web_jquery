@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head><title>Insert title here</title>
+<meta charset="UTF-8">
+<link href="tab.css"  rel="stylesheet"  type="text/css"> 
+<script src="http://code.jquery.com/jquery-1.12.0.js"></script>
+<script type="text/javascript">
+$(function(){
+	// a 태그의 클래스 속성값이 selected 이외의 패널은 숨김
+	$("ul.panel li:not("+$("ul.tab li a.selected").attr("href")+")").hide()
+	
+	// ul 에 a 를 클릭했을때
+	$("ul.tab li a").click(function(){
+	    // a 에 있는 모든 클래스 selected 를 삭제
+		$("ul.tab li a").removeClass("selected");
+		// 그리고 현재의 요소에만 selected 클래스 추가
+		$(this).addClass("selected");
+		// 탭의 변경에 맞쳐 패널의 표시,비표시를 변경합니다.모든 패널을 비표시
+		$("ul.panel li").hide();
+		// $(this).attr("href")로 클릭된 a 태그의 href 속성을 가져와 같은 이름의 id 속성을 가진 패널을 보여줌.
+		// 즉 현재의 클릭된 요소만 보여줌.
+		$($(this).attr("href")).show();
+		return false;
+	});
+});
+</script></head>
+
+<body>
+<div id="container">
+	<ul class="tab">
+		<li><a href="#tab1" class="selected">Javascript</a></li>
+		<li><a href="#tab2">CSS</a></li>
+		<li><a href="#tab3">HTML</a></li>
+		<li><a href="#tab4">jQuery</a></li>
+		<li><a href="#tab5">XHTML</a></li>
+	</ul>
+	
+	<ul class="panel">
+		<li id="tab1">JavaScript를 선택하셨네요</li>
+		<li id="tab2">CSS를 선택하셨네요	</li>
+		<li id="tab3">HTML를 선택하셨네요</li>
+		<li id="tab4">jQuery를 선택하셨네요	</li>
+		<li id="tab5">XHTML를 선택하셨네요</li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery에서 getElementById사용법</title>
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(function () {
+			//document.getElementById("name").value="Korea";
+			//$('#name').val('Japan');
+
+			 $('#btn').bind('click',function(){
+			// 	$('#name').val('korea');
+			
+
+			// 또는 var txt=document.getElementById("disp").innerText;
+			// alert(txt);
+			// var txt=$('#disp').text();
+			// alert(txt);
+
+			//또는 document.getElementById("disp").innerText="좋은 시간 되세요";
+			// $('#disp').text("좋은 시간 되세요");
+
+			//또는 var phtml=document.getElementById("disp").innerHTML;
+			//alert(phtml);
+			//var phtml=$('#disp').html();
+			//alert(phtml);
+
+			//$('#disp').text("<strong style='color:red'>즐거운 시간 되세요</strong>");
+			//$('#disp').html("<strong style='color:red'>즐거운 시간 되세요</strong>");
+
+			});
+		});
+
+	</script>
+</head>
+<body>
+<input type="text" id="name">	
+<p id="disp"><strong>값을 바꿔보세요</strong></p>
+<input type="button" id="btn" value="버튼">
+</body>
+</html>

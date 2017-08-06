@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	<script >
+		$(document).ready(function(){
+			$('#go').click(function(){
+				$('#result').text($('.cb:checked').length + "개 선택됨").css("font-size","30px");
+			});
+		});
+	</script>
+</head>
+<body>
+<form name="form1">
+	<input type="checkbox" name="chk" value="1" class="cb">농구
+	<input type="checkbox" name="chk" value="2" class="cb">낚시
+	<input type="checkbox" name="chk" value="3" class="cb">여행
+	<input type="checkbox" name="chk" value="4" class="cb">바둑
+	<input type="checkbox" name="chk" value="5" class="cb">게임
+	<input type="button" value="선택된 취미의 갯수?" id="go">
+</form><br><br>
+
+<div id="result"></div>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script >
+		function go() {
+			var cnt=0;
+			var len=document.form1.elements.length;  // 6개
+			for(var i=0; i<len; i++){
+				var ob=document.form1.elements[i];
+				if(ob.name=="chk"){
+					if(ob.checked){
+						cnt++;
+					}
+				}
+			}
+			document.getElementById("result").innerHTML=cnt +"개 선택되었습니다";
+		}
+	</script>
+</head>
+<body>
+<form name="form1">
+	<input type="checkbox" name="chk" value="1" class="cb">농구
+	<input type="checkbox" name="chk" value="2" class="cb">낚시
+	<input type="checkbox" name="chk" value="3" class="cb">여행
+	<input type="checkbox" name="chk" value="4" class="cb">바둑
+	<input type="checkbox" name="chk" value="5" class="cb">게임
+	<input type="button" value="선택된 취미의 갯수?" onclick="go()">
+</form><br><br>
+
+<div id="result"></div>
+</body>
+</html> -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../lib/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+		function process(){
+			alert("commit_1 호출");
+		}
+
+		$(document).ready(function () {
+			//객체.이벤트(함수){}
+			$('#btn2').click(function () {
+				alert("commit_2 호출");
+			});
+
+			//객체.bind(이벤트, 함수){}
+			$('#btn3').bind('click', function(){
+				alert("commit_3 호출");	
+			});
+		});
+	</script>
+</head>
+<body>
+<input type="button" id="btn1"  value="commit_1"  onclick="process()">
+<input type="button" id="btn2"  value="commit_2" >
+<input type="button" id="btn3"  value="commit_3" >	
+</body>
+</html>
